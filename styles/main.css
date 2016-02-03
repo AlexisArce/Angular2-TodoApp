@@ -1,0 +1,75 @@
+h1 {
+    margin: 1em 0;
+}
+
+li {
+    text-transform: capitalize;
+}
+
+li:hover {
+    background-color: whitesmoke;
+}
+
+.todo-title {
+    margin-left: 1em;
+}
+
+.btn + .btn {
+    margin-right: .5em;
+}
+
+.completed {
+    background-color: lightblue;
+}
+
+.completed label {
+    text-decoration: line-through;
+}
+
+.completed::after {
+    float:right;
+    text-align: center;
+    text-transform: uppercase;
+    content: "Completed";
+    font-weight: 700;
+    color: darkslategray;
+    margin-right: 5em;
+}
+
+.completed:hover {
+    background-color: lightskyblue;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.new-todo {
+    color: limegreen;
+    cursor: pointer;
+}
+
+.new-todo:hover {
+    color: lime;
+}
+
+li:hover label{
+    padding-left: .5em;
+    font-weight: 500;
+}
+
+.box-msg {
+    margin-top: 1em;
+}
+
+.controls {
+    margin: 1em 0;
+}
+
+input[type="text"] {
+    padding:.5em;
+    margin-left: 1em;
+    text-align: center;
+    border-color: darkslategray;
+    border-radius: 5px;
+}

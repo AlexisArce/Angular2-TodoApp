@@ -1,0 +1,23 @@
+<!-- This is the template for the todos app -->
+
+<h1>ToDos List</h1>
+    <div class="controls">
+        <span (click)="makeAChange(i); addNewTodo()" class="new-todo">Add new Todo <strong>+</strong></span>
+    </div>
+    <ul class="list-group form-inline">
+        <li *ngFor="#todo of todos | sort; #i=index" class="list-group-item completed" [class.completed]="todo.completed">
+           <input [(ngModel)]="todo.completed" (click)="makeAChange(i); saveTodos()" type="checkbox" />
+           <label [hidden]="todo.editing" (click)="todo.editing = true" class="todo-title">{{todo.name}}</label>
+           <input type="text" [hidden]="!todo.editing" [(ngModel)]="todo.name" (blur)="todo.editing = false"/>
+           <button (click)="makeAChange(i); deleteTodo(i)" type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+           </button>
+        </li>
+    </ul>
+
+    <div *ngIf="edited==true" class="alert alert-success alert-dismissible fade in" role="alert">
+        <button (click)="edited = !edited" type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <strong>List Saved!</strong> Changes has been saved. Changes: {{changes}}
+    </div>
