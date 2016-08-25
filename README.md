@@ -1,6 +1,10 @@
 # Angular2-TodoApp
 A simple Todo app written in Angular2 and bootstrap 4
 
+## Snapshot
+
+<img width="300" alt="todoGif" src="https://cloud.githubusercontent.com/assets/11211914/17980442/ad9c8cb8-6aff-11e6-893d-2490ee11aac4.gif">
+
 ## Prerequisites
 
 To run this app you need node to be installed: https://nodejs.org/en/
